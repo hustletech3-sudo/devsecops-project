@@ -1,9 +1,5 @@
-const http = require("http");
-
-const server = http.createServer((req, res) => {
-    res.end("Hello DevSecOps 🚀");
-});
-
-server.listen(3000, () => {
-    console.log("Server running on port 3000");
-});
+const express = require('express');
+const app = express();
+const port = 3000;
+app.get('/', (req, res) => res.send('CI/CD Working'));
+app.listen(port, () => console.log(`Server on ${port}`));
